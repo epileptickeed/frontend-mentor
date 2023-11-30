@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    
+    <main class = 'main'>
+        <div class = 'main__inner'>
+            <div class = 'bg__image'></div>
+            <div class = 'info'>
+                <div class = 'cards'>
+                    <div class = 'card__front'>
+                        <img src = "assets/images/bg-card-front.png"    alt="card_front">
+                        <span class = 'card__front__num'>0000 0000 0000 0000</span>
+                        <span class = 'card__front__name'>Jane Appleseed</span>
+                        <span class = 'card__front__my'><div class = 'card_month'>22</div>/<div class = 'card_year'>00</div></span>
+                    </div>
+                    <div class = 'card__back'>
+                        <img src = "assets/images/bg-card-back.png" alt="card_back">
+                        <span class = 'card__back__cvc'>000</span>
+                    </div>
+                </div>  
+
+                <div class = 'info__input'>
+                    <label for="cardholder">Cardholder name</label>
+                    <input type="text" name = 'cardholder' id = 'cardholder' placeholder="Jane Appleaseed" required>
+
+                    <label for="card__number">Card number</label>
+                    <input type="tel" name = 'card__number' id = 'card__number' placeholder="e.g.1234 5678 9123 0000" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" required>
+
+                    <label for="expdate">Exp.Date(MM/YY)</label>
+                    <input type="number" name = 'expdatemonth' id = 'expdatemonth' placeholder="MM" required>
+                    <input type="number" name = 'expdateyear' id = 'expdateyear' placeholder="YY" required>
+
+                    <label for="cvc">CVC</label>
+                    <input type="tel" inputmode="numeric" placeholder="e.g. 123" name = 'cvc' id = 'cvc' maxlength="3" pattern = '[0-9]*' required onkeydown="return event.keyCode !== 69">
+
+                    <input type="submit" value = 'Confirm' id = 'confirmBtn'>
+
+                </div>
+                <div class = 'complete hidden'>
+                    <img src="assets/images/icon-complete.svg" alt="">
+                    <p>We've added your card details</p>
+                    <button class = 'continue'>Continue</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src = 'assets/script/script.js'></script>
+</body>
+</html>

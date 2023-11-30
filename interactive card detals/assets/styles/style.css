@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+*{
+    font-family: 'Space Grotesk';
+    padding:0;
+    margin:0;
+
+}
+
+:root{
+    --Darkgrayishviolet-: hsl(279, 6%, 55%);
+    --Verydarkviolet-: hsl(278, 68%, 11%);
+}
+
+body{
+    max-width: 100%;
+}
+
+.bg__image{
+    background-image: url(../images/bg-main-desktop.png
+    );
+    width: 30vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25rem;
+
+    height: 100vh;
+}
+
+.info__input{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    gap:5px;
+}
+
+.card__front, .card__back{
+    position: relative;
+}
+
+.card__front span, .card__back span{
+    position: absolute;
+    color:white;
+}
+
+.card__front .card__front__num{
+    top:55%;
+    left: 6%;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.card__front .card__front__name{
+    top: 80%;
+    left: 6%;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+    font-size: .9rem;
+
+    text-transform: uppercase;
+}
+
+.card__front .card__front__my{
+    top:80%;
+    left: 69%;
+
+    display:flex;
+    letter-spacing: 2px;
+
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.card__back{
+    padding:15px 0 0 5rem;
+}
+
+.card__back .card__back__cvc{
+    top: 47.5%;
+    left: 84%;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+
+/**/
+
+input{
+    padding:10px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px #acacac solid;
+}
+
+label{
+    padding-top: 15px;
+    
+    color:var(--Verydarkviolet-);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+input[name = 'cardholder']{
+    grid-column: 1/3;
+    text-transform: uppercase;
+}
+
+input[name = 'card__number']{
+    grid-column: 1/3;
+}
+
+input[name = 'expdatemonth']{
+    grid-column: 1/2;
+}
+
+input[name = 'cvc']{
+    grid-column: 1/3;
+}
+
+input[type = 'submit']{
+    grid-column: 1/3;
+    margin-top:25px;   
+    background-color: var(--Verydarkviolet-);
+    border: none;
+    color:white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+input[type = 'submit']:hover{
+    background-color: var(--Darkgrayishviolet-);
+}
+
+.complete{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding:15px;
+}
+
+.complete button{
+    margin-top:25px;   
+    background-color: var(--Verydarkviolet-);
+    border: none;
+    color:white;
+    font-size: 1rem;
+    padding:15px;
+
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none !important;
+    /* visibility: hidden; */
+}
+
+.open{
+    display:block;
+    visibility: visible;
+}
+
+@media screen and (max-width:1320px) {
+    .info{
+        flex-direction: column;
+        gap: 0;
+    
+        height: 100%;
+    }
+
+    .cards{
+        margin:10%;
+    }
+
+    .card__front span{
+        font-size: calc(1vw + 1vh) / 0.8
+    }
+
+    .card__front .card__front__num{
+        top:55%;
+        left: 6%;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    
+    .card__back .card__back__cvc{
+        top: 47.5%;
+        left: 75%;
+
+        letter-spacing: 2px;
+
+        font-weight: 500;
+        font-size: .8rem;
+    }
+    
+
+    .cards img{
+        max-width: 90%;
+        display:block
+    }
+
+    .bg__image{
+        background-image: url(../images/bg-main-mobile.png) no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 30vh;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    input{
+        max-width: 100%;
+    }
+}
