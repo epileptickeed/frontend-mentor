@@ -1,0 +1,69 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Manrope';
+}
+
+body{
+    background-color:var(--LightGrayishBlue)
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../font/Manrope-VariableFont_wght.ttf');
+}
+
+:root{
+    --SoftCyan: hsl(174, 77%, 80%);
+    --StrongCyan: hsl(174, 86%, 45%);
+    --LightGrayishRed: hsl(14, 92%, 95%);
+    --LightRed: hsl(15, 100%, 70%);
+    --PaleBlue: hsl(226, 100%, 87%);
+
+    --White: hsl (0, 0%, 100%);
+    --VeryPaleBlue: hsl(230, 100%, 99%);
+    --LightGrayishBlue: hsl(224, 65%, 95%);
+    --LightGrayishBlue: hsl(223, 50%, 87%);
+    --GrayishBlue: hsl(225, 20%, 60%);
+    --DarkDesaturatedBlue: hsl(227, 35%, 25%);
+}
+
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    width: 500px;
+    background-color: white;
+    padding:50px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);;
+}
+
+.card > *{
+    margin:10px;
+}
+
+.traffic{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.traffic p{
+    font-size:2rem;
+}
+
+.traffic span{
+    font-size:1rem;
+}
+
+#price{
+    width: 100%;
+    border-radius: 15px;
+} 
