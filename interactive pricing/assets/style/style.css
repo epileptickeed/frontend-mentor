@@ -1,0 +1,148 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Manrope';
+}
+
+body{
+    /* background-color:var(--LightGrayishBlue) */
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../font/Manrope-VariableFont_wght.ttf');
+}
+
+:root{
+    --SoftCyan: hsl(174, 77%, 80%);
+    --StrongCyan: hsl(174, 86%, 45%);
+    --LightGrayishRed: hsl(14, 92%, 95%);
+    --LightRed: hsl(15, 100%, 70%);
+    --PaleBlue: hsl(226, 100%, 87%);
+
+    --White: hsl (0, 0%, 100%);
+    --VeryPaleBlue: hsl(230, 100%, 99%);
+    --LightGrayishBlue: hsl(224, 65%, 95%);
+    --LightGrayishBlue: hsl(223, 50%, 87%);
+    --GrayishBlue: hsl(225, 20%, 60%);
+    --DarkDesaturatedBlue: hsl(227, 35%, 25%);
+}
+
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    width: 500px;
+    background-color: white;
+    padding:50px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);;
+}
+
+.card > *{
+    margin:20px 0;
+}
+
+.card > div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .billings{
+    justify-content: center;
+    gap:10px;
+    font-weight: bold;
+    font-size:.9rem;
+    color:#838282
+}
+
+.billings span{
+    background-color: var(--LightRed);
+}
+
+.traffic .priceMY{
+    font-size:2rem;
+}
+
+.traffic span{
+    font-size:1rem;
+}
+
+#price{
+    width: 100%;
+    border-radius: 15px;
+} 
+
+#trigger{
+    -webkit-appearance: none !important;
+    background-color: #cacacc;
+    cursor: pointer;
+    border-radius: 15px;
+    padding:5px;
+    width: 32px;
+}
+
+#trigger::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 13px;
+    padding:7px;
+    border-radius: 7px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: .25s ease all;
+}
+
+.card .cons ul li{
+    list-style-type: none;
+}
+
+.card .cons ul li::before{
+    content: url(../images/icon-check.svg);
+    margin-right:10px;
+}
+
+.card .cons button{
+    padding:10px;
+    width: 50%;
+    color:#acacac;
+    border:0;
+    border-radius: 20px;
+    font-size:1.1rem;
+    background-color: var(--DarkDesaturatedBlue);
+    cursor: pointer;
+    transition: .25s ease-in-out all;
+}
+
+.card .cons button:hover{
+    color:white;
+}
+
+
+
+
+@media screen and (max-width:610px){
+
+    .card{
+        width: calc(100% - 20%);
+    }
+
+    .card > div{
+        flex-direction: column;
+    }
+
+    .card .billings{
+        flex-direction: row;
+        justify-content: center;
+        gap:10px;
+        font-weight: bold;
+        font-size:.9rem;
+        color:#838282
+    }
+}
