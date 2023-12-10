@@ -1,0 +1,150 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: hsl(223, 19%, 93%);
+}
+
+:root{
+    --Moderateblue: hsl(238, 40%, 52%);
+    --SoftRed: hsl(358, 79%, 66%);
+    --Lightgrayishblue: hsl(239, 57%, 85%);
+    --Palered: hsl(357, 100%, 86%);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(../font/Rubik-Regular.ttf);
+}
+
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    font-family: 'Rubik';
+}
+
+.main .comment_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 500px;
+    gap:15px;
+
+    /* border:1px solid; */
+    border-radius: 15px;
+    padding: 25px;
+    background-color: white;
+    margin:0 0 25px 0;
+}
+
+.comment_block .info_block{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: column;
+    width: 100%;
+    gap:15px;
+}
+
+.comment_block .info_block .info_block_inner{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.comment_block .info_block .info_block_inner .details{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+
+.comment_block .info_block .info_block_inner .details img{
+    width: 2rem;
+}
+
+.comment_block .votes, .comment_block .info_block .info_block_inner h3{
+    color: var(--Moderateblue);
+    cursor: pointer;
+}
+
+.comment_block .info_block .info_block_inner .name{
+    font-weight: bold;
+}
+
+.comment_block .votes {
+    border:1px solid;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--Lightgrayishblue);
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    width: 20px;
+
+    font-weight: bold;
+    font-size:1.25rem;
+}
+
+.comment_block .votes .upvote, .comment_block .votes .downvote{
+    cursor: pointer;
+    color: #666464;
+}
+
+.comment_block .votes .upvote:hover, .comment_block .votes .downvote:hover{
+    color: var(--Moderateblue);
+    transition: .25s ease all;
+}
+
+.textSubDiv{
+    display:flex;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+}
+
+.textSubDiv textarea{
+    width: 100%;
+    height: 100px;
+}
+
+.info_block_inner .deleteBtn {
+    font-weight: bold;
+    color:tomato;
+    cursor: pointer;
+    
+    font-size:1.2rem;
+}
+
+.info_block_inner .editBtn{
+    font-weight: bold;
+    color:#acacac;
+    cursor: pointer;
+    font-size:1.2rem;
+}
+
+.info_block .textSubDiv .submitBtn{
+    padding:15px;
+    border-radius: 25px;
+    outline: none;
+    border: 0px;
+    background-color:var(--Moderateblue);
+    color:white;
+    transition: .25s ease all;
+    cursor:pointer;
+}
+
+.info_block .textSubDiv .submitBtn:hover{
+    background-color:var(--Lightgrayishblue)
+}
