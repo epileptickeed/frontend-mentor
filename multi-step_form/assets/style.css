@@ -1,0 +1,154 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:'Ubuntu_regular';
+    background-color: rgb(193, 215, 219);
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'Ubuntu_regular';
+    src: url(fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu_bold';
+    src: url(fonts/Ubuntu-Bold.ttf);
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.hidden{ display:none }
+.is-active{ display: block }
+.visuallyhidden{ opacity: 0 }
+
+
+/* MAIN */
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main_inner{
+    background-color: white;
+    border-radius: 15px;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    width: 700px;
+}
+
+.info_inner, #info_block{
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+
+.sidebar_inner{
+    margin:20px;
+    height: 55vh;
+    border-radius: 15px;
+
+    background-image: url(images/bg-sidebar-desktop.svg);
+    background-size: cover;
+}
+
+.sidebar_inner nav ol li{
+    margin-top:10px;
+    padding: 10px;
+
+    font-family: 'Ubuntu_bold';
+    color:white;
+}
+
+.sidebar_inner nav ol li a{
+    color:rgb(189, 189, 189);
+    text-decoration: none;
+}
+
+.sidebar_inner nav ol li a.is-active{
+    color:black
+}
+
+.sidebar_inner nav ol {
+    margin-left: 20px;
+    padding:20px;
+    list-style-type: decimal;
+
+}
+
+.sidebar_inner nav ol li a span{
+    color:rgb(235, 235, 235)
+}
+
+
+
+
+
+
+/* INFO */
+
+.info_block h1, p{
+    margin: 0px;
+}
+
+.info_block p{
+    color:grey;
+}
+
+.info_block h1{
+    color:rgb(79, 58, 172);
+    margin-top:20px;
+}
+
+.info{
+    margin-left:100px;
+    padding:25px;
+}
+
+.tab.info_block .labels{
+    display:flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+    padding:50px 0 50px 0;
+}
+
+.info_block label{
+    margin-top:20px;
+    color:rgb(79, 58, 172)
+}
+
+.info_block input{
+    width: 90%;
+    padding:15px;
+    outline:none;
+    border:1px solid rgb(207, 200, 200);
+    border-radius: 10px;
+    margin-top:10px;
+}
+
+#next_step_btn{
+    color:white;
+    text-decoration: none;
+    background-color: rgb(52, 6, 126);
+    width: 75px;
+    padding:15px;
+    border-radius: 15px;
+
+    
+}
+
+.buttons{
+    display:flex;
+    justify-content: end;
+    align-items: end;
+}
